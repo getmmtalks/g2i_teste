@@ -51,7 +51,7 @@
         <div class="text-center">
 
             <h1>g2iCar</h1>
-            <p>Gestão inteligente da frota de veículos</p>
+            <p>Catálogo inteligente das linhas de veículos por marca</p>
             <form>
                 Busca por:<br />
                 <div class="form-group">
