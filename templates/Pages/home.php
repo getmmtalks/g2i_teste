@@ -50,7 +50,7 @@
     <div class="col-12 d-flex justify-content-center align-items-center">
         <div class="text-center">
 
-            <h1>g2icar</h1>
+            <h1>g2iCar</h1>
             <p>Gestão inteligente da frota de veículos</p>
             <form>
                 Busca por:<br />
