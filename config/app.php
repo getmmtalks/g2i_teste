@@ -308,6 +308,7 @@ return [
             'flags' => [],
             'cacheMetadata' => true,
             'log' => false,
+            'username'=>'root',
 
             /*
              * Set identifier quoting to true if you are using reserved words or
