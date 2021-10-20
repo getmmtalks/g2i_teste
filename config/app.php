@@ -308,7 +308,11 @@ return [
             'flags' => [],
             'cacheMetadata' => true,
             'log' => false,
-            'username'=>'root',
+            
+            'host' => env('DB_HOST'),
+            'username' => env('DB_USERNAME'),
+            'password' => env('DB_PASSWORD'),
+            'database' => env('DB_NAME'),
 
             /*
              * Set identifier quoting to true if you are using reserved words or
