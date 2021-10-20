@@ -72,3 +72,11 @@
 </div>
 
 </section>
+
+<section>
+    
+       <div class="row" id="buscar-veiculos-resultado" style="display: none; padding: 12px;">
+           
+       </div>
+    
+</section>
