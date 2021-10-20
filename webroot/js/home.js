@@ -35,6 +35,8 @@ $(document).ready(function(){
 
         $.get('/api/buscar-veiculos', $('#form-buscar-veiculos').serialize(), function(data){
             
+            console.log(data);
+            
             let html = ``;
             
             data.map(function(row){
