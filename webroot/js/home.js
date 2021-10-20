@@ -48,6 +48,8 @@ $(document).ready(function(){
             
             $('#buscar-veiculos-resultado').append(html);
             
+            $('#buscar-veiculos-resultado').css('display','block');
+            
         });
 
     });
