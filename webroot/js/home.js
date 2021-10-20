@@ -39,17 +39,17 @@ $(document).ready(function(){
             
             let html = ``;
             
-            data.map(function(row){
+            data[0].map(function(row){
                 
                 console.log(row);
                 
-                   html+=`<div class="col-4">"`;
-                   html+=`<p><b>${row.nome}</b><br />`;
-                   html+=`<span>${row.ano}</span></p>`;
-                   html+=`</div>"`;
+                   html+=`<div class="col-4">`;
+                   html+=`<p><b>${row['nome']}</b><br />`;
+                   html+=`</div>`;
                 
             });
             
+            $('#buscar-veiculos-resultado').html('');
             $('#buscar-veiculos-resultado').append(html);
             
             $('#buscar-veiculos-resultado').css('display','block');
