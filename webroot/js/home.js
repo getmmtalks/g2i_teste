@@ -39,6 +39,8 @@ $(document).ready(function(){
             
             data.map(function(row){
                 
+                console.log(row);
+                
                    html+=`<div class="col-4">"`;
                    html+=`<p><b>${row.nome}</b><br />`;
                    html+=`<span>${row.ano}</span></p>`;
