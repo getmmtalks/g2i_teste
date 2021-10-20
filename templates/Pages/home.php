@@ -6,39 +6,37 @@
         <h5 class="modal-title" id="exampleModalLabel">Adicionar veículo</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
+      <form id="modal-add-veiculo">
+        <?=$this->Form->create();?>
       <div class="modal-body">
         
-        <form>
+        
         <div class="form-group">
-        <select id="inputState" class="form-control">
+        <select class="form-control selectMarca" required id="inputMarca" name="inputMarca">
             <option selected disabled>Selecione a marca</option>
-            <option></option>
         </select>
         </div>
+        <br />
+
         <div class="form-group">
-            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Título">
+            <input type="text" class="form-control" id="inputNome" placeholder="Nome" name="inputNome" required>
         </div>
-        
+        <br />
+
         <div class="form-group">
-        <input type="number" min="1900" placeholder="Ano" class="form-control" id="inputCity">
+          <input type="number" min="1900" placeholder="Ano" class="form-control" id="inputAno" name="inputAno" required>
         </div>
 
-        <div class="custom-file">
-        <div class="progress">
-        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%"></div>
-        </div>
-            <input type="file" class="custom-file-input" id="validatedCustomFile" required>
-            <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
-            <div class="invalid-feedback">Example invalid custom file feedback</div>
-        </div>
         
-        </form>
+        
+        
 
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary">Salvar</button>
+        <button type="submit" class="btn btn-primary">Salvar</button>
       </div>
+      </form>
     </div>
   </div>
 </div>
@@ -55,12 +53,11 @@
             <form>
                 Busca por:<br />
                 <div class="form-group">
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Título">
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nome">
                 </div>
                 <div class="form-group">
-                <select id="inputState" class="form-control">
+                <select class="form-control selectMarca">
                     <option selected disabled>Marca</option>
-                    <option></option>
                 </select>
                 </div>
                 <div class="form-group">
