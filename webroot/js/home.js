@@ -34,7 +34,20 @@ $(document).ready(function(){
         e.preventDefault();
 
         $.get('/api/buscar-veiculos', $('#form-buscar-veiculos').serialize(), function(data){
-            console.log(data);
+            
+            let html = ``;
+            
+            data.map(function(row){
+                
+                   html+=`<div class="col-4">"`;
+                   html+=`<p><b>${row.nome}</b><br />`;
+                   html+=`<span>${row.ano}</span></p>`;
+                   html+=`</div>"`;
+                
+            });
+            
+            $('#buscar-veiculos-resultado').append(html);
+            
         });
 
     });
