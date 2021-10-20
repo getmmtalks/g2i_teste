@@ -22,11 +22,18 @@ $(document).ready(function(){
     $('#modal-add-veiculo').on('submit', function(e){
         e.preventDefault();
 
-        let marca_id = $('#modal-add-veiculo #inputMarca').val();
-        let nome = $('#modal-add-veiculo #inputNome').val();
-        let ano = $('#modal-add-veiculo #inputAno').val();
+        
 
-        $.post('/api/criar-veiculo', $('#modal-add-veiculo').serialize(),function(data){
+        $.post('/api/criar-veiculo', $('#modal-add-veiculo').serialize(), function(data){
+            console.log(data);
+        });
+
+    });
+
+    $('#form-buscar-veiculos').on('submit', function(e){
+        e.preventDefault();
+
+        $.get('/api/buscar-veiculos', $('#form-buscar-veiculos').serialize(), function(data){
             console.log(data);
         });
 

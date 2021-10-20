@@ -56,10 +56,19 @@ class RESTApiController extends AppController
     {
         try {
             
-            echo $this->request->param('controller');
+            $articles = TableRegistry::getTableLocator()->get('Veiculos');
 
-            
-            die();
+            $conditions = [
+                'Veiculos.nome LIKE' => '%'.$this->request->getQuery('inputNome').'%'
+            ];
+
+            if($this->request->getQuery('inputMarca')>0){
+                array_push($conditions, ['Veiculos.marca_id'=>$this->request->getQuery('inputMarca')]);
+            }
+
+            $query = $articles->find('all', ['conditions' =>$conditions])->toArray();
+
+            return $this->response->withType("application/json")->withStringBody(json_encode([$query]));
             
         } catch (MissingTemplateException $exception) {
             if (Configure::read('debug')) {

@@ -50,15 +50,18 @@
 
             <h1>g2iCar</h1>
             <p>Catálogo inteligente das linhas de veículos por marca</p>
-            <form>
+            <form id="form-buscar-veiculos">
+              <?=$this->Form->create();?>
                 Busca por:<br />
                 <div class="form-group">
-                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nome">
+                    <input type="text" class="form-control" id="formGroupExampleInput" name="inputNome" placeholder="Nome">
                 </div>
+                <br />
                 <div class="form-group">
-                <select class="form-control selectMarca">
+                <select class="form-control selectMarca" name="inputMarca">
                     <option selected disabled>Marca</option>
                 </select>
+                <br />
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary">Buscar</button>

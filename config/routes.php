@@ -72,7 +72,7 @@ $routes->scope('/api', function(RouteBuilder $builder){
 
 
     $builder->get('/listar-marcas', ['controller'=>'RESTApi', 'action'=>'listarMarcas']);
-    //$builder->get('/buscar-veiculos', ['controller'=>'RESTApi', 'action'=>'buscarVeiculos']);
     $builder->post('/criar-veiculo', ['controller'=>'RESTApi', 'action'=>'criarVeiculo']);
+    $builder->get('/buscar-veiculos', ['controller'=>'RESTApi', 'action'=>'buscarVeiculos']);
 
 });
